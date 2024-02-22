@@ -9,9 +9,9 @@ export const routes: Routes = [
   {path:'',component:Page1Component},
   {path:'page1',component:Page1Component},
   {path:'page2',component:Page2Component},
-  {path:'posts',children:[
+  {path:'posts',children:[ //posts is not alone component by itself
     {path:'view', component:PostComponent},
     {path:'comments/:id',component:CommentComponent}
   ]},
-  {path:"**",component:NotFoundComponent}
+  {path:"**",component:NotFoundComponent} // **:path ne olursa olsun anlamında
 ];
